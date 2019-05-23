@@ -1,0 +1,142 @@
+.hero {
+	background: url('images/bg-desktop.svg') center/100% no-repeat;
+    background-color: hsl(257, 40%, 49%);
+}
+
+.container {
+	padding: 2% 2%;
+}
+
+
+/* HEADER */
+
+.hero-head img {
+	width: 12em;
+}
+
+
+/* BODY */
+
+.hero-body img {
+	max-width: 100%;
+	min-width: 50%;
+    width: 80%;
+}
+
+.hero-body p {
+	padding: 5% 0;
+}
+
+.hero-body button {
+	width: 40%;
+}
+
+
+/* FOOTER */
+
+.socials {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.socials i.fab {
+	color: #ffffff;
+	border-radius: 50%;
+	border: 1.2px solid white;
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+	/* line-height = height for vertical center */
+	text-align: center;
+	margin: 0 8px;
+	margin: 0 0.5rem;
+}
+
+
+/* MEDIA QUERRY */
+
+@media (max-width: 1024px) {
+	.hero {
+		background: url("images/bg-mobile.svg") center top/100% no-repeat;
+		background-color: hsl(257, 40%, 49%);
+		height: 100%;
+	}
+	.container {
+		padding: 5% 7%;
+	}
+	.hero-head img {
+		width: 8em;
+	}
+	.hero-body img {
+		width: 100%;
+	}
+	.hero-body h1 {
+		font-size: 1.7rem!important;
+	}
+	.hero-body button {
+		font-size: 1rem!important;
+	}
+	.socials {
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.columns {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.hero-head img {
+		width: 16em;
+	}
+	.hero-body img {
+		width: 100%;
+	}
+	.hero-body h1 {
+		font-size: 3rem!important;
+	}
+	.hero-body p {
+		font-size: 1.5rem!important;
+	}
+	.hero-body button {
+		font-size: 2rem!important;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.hero-body h1 {
+		font-size: 4rem!important;
+	}
+	.hero-body p {
+		font-size: 2rem!important;
+	}
+	.hero-body button {
+		font-size: 2.5rem!important;
+	}
+	.socials i.fab {
+		width: 64px;
+		height: 64px;
+		line-height: 64px;
+		/* line-height = height for vertical center */
+		text-align: center;
+		margin-left: 1rem;
+	}
+	.socials i {
+		font-size: 2rem!important;
+	}
+}
+
+/* FIX IE */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .hero-body img[src$=".svg"] {
+      width: 100%; 
+    }
+  }
