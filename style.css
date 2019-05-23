@@ -1,12 +1,12 @@
 .hero {
 	background: url('images/bg-desktop.svg') center/100% no-repeat;
-    background-color: hsl(257, 40%, 49%);
+	background-color: hsl(257, 40%, 49%);
+	background-size: cover;
 }
 
 .container {
-	padding: 2% 2%;
+	padding: 2% 5%;
 }
-
 
 /* HEADER */
 
@@ -20,7 +20,7 @@
 .hero-body img {
 	max-width: 100%;
 	min-width: 50%;
-    width: 80%;
+    width: 95%;
 }
 
 .hero-body p {
@@ -29,6 +29,17 @@
 
 .hero-body button {
 	width: 40%;
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.hero-body .button:hover {
+  background-color: hsl(348, 100%, 61%);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 
@@ -59,7 +70,10 @@
 
 /* MEDIA QUERRY */
 
-@media (max-width: 1024px) {
+
+/* MOBILE */
+
+@media screen and (max-width: 1024px) {
 	.hero {
 		background: url("images/bg-mobile.svg") center top/100% no-repeat;
 		background-color: hsl(257, 40%, 49%);
@@ -68,18 +82,26 @@
 	.container {
 		padding: 5% 7%;
 	}
+
+	.cloumn {
+		width: 100%!important;
+	}
 	.hero-head img {
 		width: 8em;
 	}
+
 	.hero-body img {
 		width: 100%;
 	}
+
 	.hero-body h1 {
 		font-size: 1.7rem!important;
 	}
+
 	.hero-body button {
 		font-size: 1rem!important;
 	}
+
 	.socials {
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
@@ -87,31 +109,33 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+
+/* IPAD PRO */
+@media (min-width: 768px) and (max-width: 1024px)  {
+	.hero-head img {
+		width: 16em;
+	}
+
+	.hero-body {
+		text-align: center;
+	}
 	.columns {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
 		flex-direction: column;
+		align-items: center;	
 	}
-	.hero-head img {
-		width: 16em;
-	}
-	.hero-body img {
+
+	.column {
 		width: 100%;
 	}
-	.hero-body h1 {
-		font-size: 3rem!important;
+	.hero-body figure {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
-	.hero-body p {
-		font-size: 1.5rem!important;
-	}
-	.hero-body button {
-		font-size: 2rem!important;
-	}
-}
 
-@media (min-width: 769px) and (max-width: 1024px) {
 	.hero-body h1 {
 		font-size: 4rem!important;
 	}
@@ -134,9 +158,11 @@
 	}
 }
 
-/* FIX IE */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .hero-body img[src$=".svg"] {
-      width: 100%; 
-    }
-  }
+/* FIX SAFARI WRONG PADDING */
+
+@media screen and (min-width: 1088px) {
+	.container {
+		max-width: 100%;
+		width: 100%;
+	}
+}
